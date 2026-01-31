@@ -14,8 +14,8 @@ body {
   padding: 120px 20px;
   text-align: center;
   background: url("../images/header_img.png") center / cover no-repeat;
-  filter: contrast(1.2) saturate(1.1);
-  background-blend-mode: overlay;
+  /*filter: contrast(1.2) saturate(1.1);
+  background-blend-mode: overlay;*/
 }
 
 .header h1 {
