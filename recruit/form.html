@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エントリーフォーム｜株式会社向陽エンジニアリング</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+
+<body class="no-hero">
+  <!-- form.html -->
+    <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-area">
+        <img src="images/ロゴマーク.png" alt="会社ロゴ" class="site-logo">
+        <span class="logo-text">
+          <span class="company-name">KOYO ENGINEERING</span>
+          <span class="recruit-text">RECRUITSITE</span>
+        </span>
+      </a>
+        <nav class="main-nav">
+        <a href="index.html">トップ</a>
+        <a href="about.html">会社について</a>
+        <a href="interviews.html">社員インタビュー</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="jobs.html">募集要項</a>
+        <a href="news.html">お知らせ</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">各種フォーム</a>
+          <div class="dropdown-menu">
+            <a href="form.html?type=entry">・エントリー</a>
+            <a href="form.html?type=contact">・お問い合わせ</a>
+            <a href="form.html?type=offer">・見学申込</a>
+          </div>
+        </div>
+        </nav>
+        <div class="hamburger" id="hamburger">☰</div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">トップ</a>
+      <a href="about.html">会社について</a>
+      <a href="interviews.html">社員インタビュー</a>
+      <a href="faq.html">よくある質問</a>
+      <a href="jobs.html">募集要項</a>
+      <a href="news.html">お知らせ</a>
+      <a href="form.html?type=entry">エントリー</a>
+      <a href="form.html?type=contact">お問い合わせ</a>
+      <a href="form.html?type=offer">見学申込</a>
+    </nav>
+  </header>
+
+  <!-- エントリーフォーム -->
+  <section id="entry" class="form-section" style="display: none;">
+    <h2>エントリーフォーム</h2>
+    <p class="form-intro">必要事項をご記入のうえ、送信してください。（<span style="color: red;">*</span>は必須項目）</p>
+    <form action="submit_entry.php" method="post" class="custom-form">
+        <label for="entry-name">お名前<span style="color: red;">*</span></label>
+        <input type="text" id="entry-name" name="name" placeholder="例：向陽 太郎" required>
+
+        <label for="entry-kana">フリガナ<span style="color: red;">*</span></label>
+        <input type="text" id="entry-kana" name="kana" placeholder="例：コウヨウ タロウ" required>
+
+        <label for="entry-postal">郵便番号<span style="color: red;">*</span></label>
+        <div class="postal">
+            <input type="text" id="entry-postal1" name="postal1" maxlength="3" placeholder="000" required> -
+            <input type="text" id="entry-postal2" name="postal2" maxlength="4" placeholder="0000" required>
+            <button type="button" onclick="searchAddress()">住所検索</button>
+        </div>
+        <div id="zipError" class="error">※ 郵便番号は半角数字のみで入力してください。</div>
+
+        <label for="entry-prefecture">都道府県<span style="color: red;">*</span></label>
+        <input type="text" id="entry-prefecture" name="prefecture" required>
+
+        <label for="entry-city">市区町村<span style="color: red;">*</span></label>
+        <input type="text" id="entry-city" name="city" required>
+
+        <label for="entry-address">町名・番地</label>
+        <input type="text" id="entry-address" name="address">
+
+        <label for="entry-building">建物名・部屋番号</label>
+        <input type="text" id="entry-building" name="building">
+
+        <label for="entry-email">メールアドレス<span style="color: red;">*</span></label>
+        <input type="text" id="entry-email" name="email" placeholder="例：example@koyo.com" required>
+
+        <label for="entry-tel">電話番号</label>
+        <div class="tel">
+            <input type="text" id="entry-tel1" name="tel1" placeholder="080" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel2" name="tel2" placeholder="1234" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel3" name="tel3" placeholder="5678" maxlength="4">
+        </div>
+
+        <label for="entry-gender">性別<span style="color: red;">*</span></label>
+        <label class="radio-inline"><input type="radio" name="gender" value="man">男性</label>
+        <label class="radio-inline"><input type="radio" name="gender" value="woman">女性</label>
+        <label class="radio-inline"><input type="radio" name="gender" value="other">無回答</label>
+
+        <label for="entry-birthday">生年月日<span style="color: red;">*</span></label>
+        <div class="birthday">
+            <input type="text" id="year" name="year" placeholder="2000" minlength="4" maxlength="4" required>年
+            <input type="text" id="month" name="month" placeholder="01" minlength="2" maxlength="2" required>月
+            <input type="text" id="day" name="month" placeholder="01" minlength="2" maxlength="2" required>日
+        </div>
+
+        <label for="entry-position">希望職種<span style="color: red;">*</span></label>
+        <select id="entry-position" name="position">
+            <option value="">選択してください</option>
+            <option value="sales">営業</option>
+            <option value="pfproduction">パーツフィーダ製作</option>
+            <option value="support">事務（機械加工部門）</option>
+            <option value="operater">CAD/CAMオペレーター</option>
+            <option value="packing">出荷確認検査（梱包・発送業務）</option>
+        </select>
+
+        <label for="entry-driverlicense">運転免許の有無<span style="color: red;">*</span></label>
+        <label class="radio-inline"><input type="radio" name="driver" value="yes">有</label>
+        <label class="radio-inline"><input type="radio" name="driver" value="no">無</label>
+
+        <label for="entry-license">所有資格</label>
+        <textarea id="license" name="license" rows="4" placeholder="所有資格があればご記入ください。"></textarea>
+
+        <label for="entry-message">備考</label>
+        <textarea id="message" name="message" rows="6" placeholder="希望やご質問、連絡のつきやすい時間帯等あればご記入ください。"></textarea>
+
+        <button type="submit">送信する</button>
+    </form>
+  </section>
+
+  <!-- 問い合わせフォーム -->
+  <section id="contact" class="form-section">
+    <h2>お問い合わせフォーム</h2>
+    <p class="form-intro">※内容により、返信まで1～3営業日ほどかかる場合があります。（<span style="color: red;">*</span>は必須項目）</p>
+    <form action="submit_contact.php" method="post" class="custom-form">
+        <label for="contact-name">お名前</label>
+        <input type="text" id="contact-name" name="name" placeholder="例：向陽 太郎（匿名可）">
+
+        <label for="contact-email">メールアドレス<span style="color: blue;">*</span><span class="note">※メールで回答を希望する場合は必須</span></label>
+        <input type="email" id="contact-email" name="email" placeholder="例：example@koyo.com">
+
+        <label for="contact-tel">電話番号<span style="color: blue;">*</span><span class="note">※電話で回答を希望する場合は必須</span></label>
+        <div class="tel">
+            <input type="text" id="entry-tel1" name="tel1" placeholder="080" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel2" name="tel2" placeholder="1234" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel3" name="tel3" placeholder="5678" maxlength="4">
+        </div>
+        
+
+        <label>お問い合わせの種類</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="topic[]" value="採用について"> 採用について</label>
+            <label><input type="checkbox" name="topic[]" value="職場について"> 職場について</label>
+            <label><input type="checkbox" name="topic[]" value="その他"> その他</label>
+        </div>
+
+        <label for="contact-content">お問い合わせ内容<span style="color: red;">*</span></label>
+        <textarea id="contact-content" name="content" rows="6" required placeholder="できるだけ具体的にご記入ください"></textarea>
+
+        <label>回答方法の希望<span style="color: red;">*</span></label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="reply[]" value="メール" id="reply-email"> メールで返信</label><br>
+            <label><input type="checkbox" name="reply[]" value="電話" id="reply-tel"> 電話で話したい</label>
+        </div>
+
+        <div id="replyError" class="error" style="display: none; color: red; font-size: 0.9em;">
+            ※ 回答方法はいずれかを選択してください。
+        </div>
+
+        <button type="submit">問い合わせを送信する</button>
+    </form>
+  </section>
+
+  <!-- 見学申込フォーム -->
+  <section id="offer" class="form-section">
+    <h2>見学のお申込み</h2>
+    <p class="form-intro">※応募ではありません。服装自由／所要時間：約1時間～2時間程度です。（<span style="color: red;">*</span>は必須項目）</p>
+
+    <form action="submit_tour.php" method="post" class="custom-form">
+        <label for="offer-name">お名前<span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="例：向陽 太郎" required>
+
+        <label for="offer-kana">フリガナ<span style="color: red;">*</span></label>
+        <input type="text" id="offer-kana" name="kana" placeholder="例：コウヨウ タロウ" required>
+
+        <label for="offer-email">メールアドレス<span style="color: red;">*</span></label>
+        <input type="email" id="offer-email" name="email" placeholder="例：example@koyo.com" required>
+
+        <label for="offer-phone">電話番号</label>
+        <div class="tel">
+            <input type="text" id="entry-tel1" name="tel1" placeholder="080" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel2" name="tel2" placeholder="1234" minlength="2" maxlength="4"> -
+            <input type="text" id="entry-tel3" name="tel3" placeholder="5678" maxlength="4">
+        </div>
+
+        <label>希望職種<span style="color: red;">*</span></label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="position[]" value="製造"> パーツフィーダ製作</label>
+            <label><input type="checkbox" name="position[]" value="事務"> 事務</label>
+            <label><input type="checkbox" name="position[]" value="CAD"> CAD/CAMオペレーター</label>
+            <label><input type="checkbox" name="position[]" value="営業"> 営業</label>
+            <label><input type="checkbox" name="position[]" value="未定"> わからない</label>
+        </div>
+
+        <label for="offer-date1">見学希望日（第1希望）<span style="color: red;">*</span></label>
+        <input type="date" id="offer-date1" name="date1">
+
+        <label for="offer-date2">見学希望日（第2希望）</label>
+        <input type="date" id="offer-date2" name="date2">
+
+        <label for="offer-message">ご質問・ご要望など</label>
+        <textarea id="offer-message" name="message" rows="5" placeholder="例：駐車場はありますか？などご自由にどうぞ"></textarea>
+
+        <button type="submit">見学を申し込む</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img src="images/header_logo.png" alt="向陽エンジニアリングロゴ" class="footer-logo">
+      <p>〒987-1103 宮城県石巻市北村字大尻三3-1<br>
+      TEL：0225-73-4531　FAX：0225-73-4519</p>
+      <p>&copy;（株）向陽エンジニアリング パーツフィーダ、機械加工、自動機なら All Rights Reserved.</p>
+      <div class="corporate-link">
+        <a href="https://koyogroup.net/ko-eng/" target="_blank" rel="nofollow">コーポレートサイト</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
