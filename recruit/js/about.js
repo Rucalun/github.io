@@ -1,17 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.querySelector(".video-overlay");
+  const fadeOut = () => {
+    overlay.classList.add("fade-out");
+  };
+
+  setTimeout(fadeOut, 3000);
 
   window.addEventListener("load", () => {
     setTimeout(() => {
-      /*overlay.classList.add("fade-out");*/
+      overlay.classList.add("fade-out");
     }, 3000);
   });
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) {
-      overlay.classList.add("fade-out");
-    }
-  });
+    if (window.scrollY > 30) fadeOut();
+  }, { once: true });
+
+  overlay.addEventListener("click", fadeOut, { once: true });
 
   /*
   setTimeout(() => {
