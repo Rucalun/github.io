@@ -459,7 +459,7 @@ footer p {
     left: 0;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 150;
+    z-index: 1200;
   }
   .mobile-nav a {
     padding: 15px;
@@ -492,8 +492,8 @@ footer p {
   .recruit-text {
     font-size: 0.9em;
   }
-  .video-wrapper {
-    margin-top: 68px;
+  .video-hero {
+    padding-top: 68px;
   }
   .gallery-item {
     width: 100%;
