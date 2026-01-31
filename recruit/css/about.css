@@ -328,14 +328,18 @@ h1, h2 {
   padding-top: 80px;
   overflow: hidden;
 }
-
+.pc-only {
+  display: block;
+}
+.sp-only {
+  display: none;
+}
 .video-wrapper {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
-
 .video-wrapper iframe {
   position: absolute;
   inset: 0;
@@ -343,6 +347,11 @@ h1, h2 {
   height: 100%;
   border: none;
   pointer-events: none;
+}
+.video-fallback img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
 }
 .video-overlay {
   position: relative;
@@ -497,5 +506,13 @@ footer p {
   }
   .gallery-item {
     width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .video-wrapper {
+    display: none;
+  }
+  .video-fallback {
+    display: block;
   }
 }
