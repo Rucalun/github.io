@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }); */
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) fadeOut();
+    if (window.scrollY > 15) fadeOut();
   }, { once: true });
 
   overlay.addEventListener("click", fadeOut, { once: true });
