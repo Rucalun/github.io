@@ -369,7 +369,6 @@ h1, h2 {
   color: white;
   z-index: 2;
   transition: opacity 0.8s ease;
-  inset: 0;
 }
 .video-overlay.fade-out {
   opacity: 0;
@@ -504,6 +503,12 @@ footer p {
   }
   .video-hero {
     padding-top: 68px;
+  }
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
   }
   .gallery-item {
     width: 100%;

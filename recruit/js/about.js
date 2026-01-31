@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(fadeOut, 3000);
 
+  /*
   window.addEventListener("load", () => {
     setTimeout(() => {
       overlay.classList.add("fade-out");
     }, 3000);
-  });
+  }); */
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 30) fadeOut();
