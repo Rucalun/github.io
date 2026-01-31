@@ -72,6 +72,11 @@ body {
   animation: scrollBounce 1.6s infinite;
 }
 
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
 .scroll-text {
   font-size: 12px;
   letter-spacing: 0.18em;
