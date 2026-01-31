@@ -27,6 +27,15 @@ body {
   color: #111111;
 }
 
+.header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2dd4ff;
+  margin-top: 12px;
+}
+
 .header p {
   max-width: 480px;
   font-size: 16px;
