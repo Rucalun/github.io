@@ -370,6 +370,7 @@ h1, h2 {
   z-index: 999;
   transition: opacity 0.8s ease;
   opacity: 1 !important;
+  inset: 0;
 }
 .video-overlay.fade-out {
   opacity: 0;
