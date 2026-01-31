@@ -246,6 +246,7 @@ body {
   font-size: 15px;
   line-height: 1.8;
   color: #444;
+  margin: 0 auto;
   max-width: 750px;
   text-align: center;
 }
