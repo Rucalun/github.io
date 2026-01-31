@@ -242,6 +242,13 @@ body {
   font-weight: 500;
 }
 
+.about-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 700px;
+}
+
 .footer {
   text-align: center;
   padding: 40px;
