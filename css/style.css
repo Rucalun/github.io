@@ -76,10 +76,11 @@ body {
 .scroll-arrow::before {
   content: "";
   display: block;
-  width: 1px;
-  height: 20px;
+  width: 2px;
+  height: 28px;
   margin: 0 auto 6px;
-  background: rgba(45, 212, 255, 0.6);
+  background: #2dd4ff;
+  box-shadow: 0 0 6px rgba(45, 212, 255, 0.8);
 }
 
 @keyframes scrollBounce {
