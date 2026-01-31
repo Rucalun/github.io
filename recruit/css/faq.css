@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400&display=swap');
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  color: black;
+  width: 100%;
+  z-index: 100;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  min-height: 25px;
+}
+.header-inner {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    text-decoration: none;
+    top: 10px;
+    left: 30px;
+    height: 50px;
+    z-index: 100;
+}
+.site-logo {
+    position: static;
+    margin-right: 10px;
+    height: 50px;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    align-items: center;
+}
+.company-name {
+  font-size: 1.5em;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: gray;
+}
+.recruit-text {
+  font-size: 1.2em;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: gray;
+}
+.no-hero .site-header {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+}
+.main-nav {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.main-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: #ff6600;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 8px 0;
+  border: 1px solid #eee;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 0 10px 0;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.hamburger, .mobile-nav {
+  display: none;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  padding: 0;
+  color: #333;
+  padding-top: 80px;
+}
+.faq-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #FF6600;
+  margin-bottom: 20px;
+}
+.faq-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.05em;
+}
+.faq-category {
+  margin-bottom: 30px;
+}
+.faq-category h2 {
+  font-size: 1.2em;
+  color: #0077cc;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 4px;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+.faq-item a {
+  color: #ff6600;
+  cursor: pointer;
+}
+.faq-item a:hover {
+  color: #e55500;
+}
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 14px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.faq-question::after {
+  content: "＋";
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+.faq-question.active::after {
+  content: "−";
+}
+.faq-answer {
+  display: none;
+  padding: 0 0 15px;
+  font-size: 0.95em;
+  color: #444;
+}
+.faq-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.05em;
+}
+.faq-footer a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #FF6600;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.faq-footer a:hover {
+  background: #e55500;
+}
+footer {
+  background-color: #1a73e8;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer-logo {
+  max-height: 40px;
+  margin-bottom: 15px;
+}
+footer p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+.corporate-link {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.corporate-link a {
+  color: #ffffff;
+  font-weight: underline;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+.corporate-link a:hover {
+  color: #e55500;
+}
+.corporate-link a[target=_blank][rel=nofollow] {
+  padding-right: 20px;
+  background: url(../images/icons8-外部リンク-24.png) right center/11px auto no-repeat;
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .site-header {
+    padding: 8px 0;
+  }
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    min-height: 60px;
+  }
+  .main-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    z-index: 1100;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 150;
+  }
+  .mobile-nav a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+  }
+  .mobile-nav a:hover {
+    background-color: #f9f9f9;
+  }
+  .mobile-nav.active {
+    display: flex;
+  }
+  .main-nav.active {
+    display: flex;
+  }
+  .main-nav a {
+    margin: 10px 0;
+  }
+  .site-logo {
+    height: 35px;
+  }
+  .logo-text {
+    line-height: 1.1;
+  }
+  .company-name {
+    font-size: 1.3em;
+  }
+  .recruit-text {
+    font-size: 0.9em;
+  }
+  .body {
+    padding-top: 60px;
+  }
+}
