@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Tomoya Miura</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Portfolio</h1>
+    <p>HTML / CSS / JavaScript を用いた制作実績</p>
+    <a href="#work" class="btn">作品を見る</a>
+  </header>
+
+  <!-- Work -->
+<div class="work-card">
+  <div class="work-image">
+    <img src="images/hp_sc.png" alt="リクルートサイトのスクリーンショット">
+    <p class="image-caption">
+      採用向けに制作したリクルートサイト（トップページ）
+    </p>
+  </div>
+
+  <div class="work-content">
+    <h3>リクルートサイト</h3>
+    <p>
+      現職のリクルートサイトをスクラッチで制作しました。
+    </p>
+
+    <ul class="tech-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <div class="buttons">
+      <a href="https://example.com" target="_blank" class="btn">サイトを見る</a>
+      <a href="#detail" class="btn sub">詳細</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Detail -->
+  <section id="detail" class="section gray">
+    <h2>制作詳細</h2>
+
+    <div class="detail">
+      <h4>概要</h4>
+      <p>
+        主に若い世代をターゲットとしたリクルートサイトです。
+      </p>
+
+      <h4>担当範囲</h4>
+      <p>
+        デザイン / コーディング / レスポンシブ対応
+      </p>
+
+      <h4>工夫した点</h4>
+      <ul>
+        <li>コーポレートサイトでメインに使われているオレンジの補色である青をアクセントに採用し、<br>
+          重要な要素が一目でわかるようにしました。</li>
+        <li>難しい用語やわかりにくい表現については、未経験者でも理解しやすいようにしています。</li>
+        <li>スマートフォン表示ではナビゲーションの視認性を損なわないよう、ハンバーガーメニューを採用しました。</li>
+      </ul>
+
+      <h4>改善したい点</h4>
+      <p>
+        JavaScriptを用いたインタラクションについては、まだ表現の幅が限られているため、今後強化したいです。
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <h2>About Me</h2>
+    <p class="about-read">
+      専門学校で2年間IT関係について学び、<br>
+      社内SEとして株式会社向陽エンジニアリングに就職。<br>
+      リクルートサイトの作成を経てプログラミングの楽しさに気づき、<br>
+      エンジニアへの転職を決意する。
+    </p>
+    <h3>Profile</h3>
+    <ul class="profile-list">
+      <li><span>名前</span>：三浦 朋也</li>
+      <li><span>使用技術</span>：HTML / CSS / JavaScript</li>
+      <li><span>保有資格</span>：基本情報技術者 / Python3エンジニア認定基礎</li>
+      <li><span>趣味</span>：ゲーム、カラオケ、画像生成</li>
+    </ul>
+    <h3>Skill</h3>
+    <ul class="skill-list">
+      <li><span>フロントエンド</span>：HTML / CSS / JavaScript</li>
+      <li><span>バックエンド</span>：Python（基礎）</li>
+      <li><span>開発環境</span>：VS Code</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
