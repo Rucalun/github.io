@@ -367,7 +367,7 @@ h1, h2 {
   align-items: center;
   background: rgba(0,0,0,0.4);
   color: white;
-  z-index: 2;
+  z-index: 999;
   transition: opacity 0.8s ease;
   opacity: 1 !important;
 }

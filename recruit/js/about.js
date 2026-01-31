@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("load", () => {
     setTimeout(() => {
-      overlay.classList.add("fade-out");
+      /*overlay.classList.add("fade-out");*/
     }, 3000);
   });
 
