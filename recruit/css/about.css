@@ -354,7 +354,7 @@ h1, h2 {
   object-fit: cover;
 }
 .video-overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;
