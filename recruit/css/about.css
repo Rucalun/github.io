@@ -369,6 +369,7 @@ h1, h2 {
   color: white;
   z-index: 2;
   transition: opacity 0.8s ease;
+  opacity: 1 !important;
 }
 .video-overlay.fade-out {
   opacity: 0;
