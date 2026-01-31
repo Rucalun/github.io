@@ -322,7 +322,15 @@ h1, h2 {
   border-radius: 8px;
 } */
 .video-wrapper {
+  position: relative;
   margin-top: 68px;
+  max-width: 1500px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.video-wrapper iframe {
+  pointer-events: none;
 }
 .video-hero {
   position: relative;
