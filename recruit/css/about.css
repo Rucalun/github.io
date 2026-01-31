@@ -367,9 +367,8 @@ h1, h2 {
   align-items: center;
   background: rgba(0,0,0,0.4);
   color: white;
-  z-index: 999;
+  z-index: 2;
   transition: opacity 0.8s ease;
-  opacity: 1 !important;
   inset: 0;
 }
 .video-overlay.fade-out {
