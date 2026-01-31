@@ -13,10 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /*
   setTimeout(() => {
     overlay.classList.add("fade-out");
-  }, 3000); */
+  }, 3000);
 
   const fadeIns = document.querySelectorAll('.fade-in');
 
