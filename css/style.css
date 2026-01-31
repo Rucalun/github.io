@@ -49,11 +49,12 @@ body {
 
 .scroll-down {
   position: absolute;
-  left: 20px;
+  left: 50%;
   bottom: 28px;
+  transform: translateX(-50%);
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
   text-decoration: none;
   color: #111;
@@ -63,13 +64,22 @@ body {
 
 .scroll-down:hover {
   opacity: 1;
-  transform: translateY(2px);
+  transform: translateX(-50%) translateY(2px);
 }
 
 .scroll-arrow {
-  font-size: 18px;
+  font-size: 28px;
   color: #2dd4ff;
   animation: scrollBounce 1.6s infinite;
+}
+
+.scroll-arrow::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  margin: 0 auto 6px;
+  background: rgba(45, 212, 255, 0.6);
 }
 
 @keyframes scrollBounce {
@@ -78,7 +88,7 @@ body {
 }
 
 .scroll-text {
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #444;
@@ -245,7 +255,6 @@ body {
   }
 
   .scroll-down {
-    left: 16px;
     bottom: 18px;
   }
 
