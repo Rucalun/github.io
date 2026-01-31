@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", () => {
     setTimeout(() => {
       overlay.classList.add("fade-out");
-    }, 1500);
+    }, 3000);
   });
 
   window.addEventListener("scroll", () => {
